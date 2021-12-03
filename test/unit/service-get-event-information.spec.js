@@ -19,7 +19,7 @@ describe('bacstack - Services layer GetEventInformation unit', () => {
 
 describe('GetEventInformationAcknowledge', () => {
   it('should successfully encode and decode', () => {
-    const timeStamp = new Date(1, 1, 1);
+    const timeStamp = new Date(1, 0, 1);
     timeStamp.setMilliseconds(990);
     const buffer = utils.getBuffer();
     baServices.getEventInformation.encodeAcknowledge(buffer, [

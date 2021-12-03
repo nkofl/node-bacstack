@@ -7,8 +7,8 @@ const baServices  = require('../../lib/services');
 describe('bacstack - Services layer WriteProperty unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
-    const date = new Date(1, 1, 1);
-    const time = new Date(1, 1, 1);
+    const date = new Date(2021, 11, 25);
+    const time = new Date(1, 0, 1, 12, 34, 56);
     time.setMilliseconds(990);
     baServices.writeProperty.encode(buffer, 31, 12, 80, 0xFFFFFFFF, 0, [
       {type: 0},
@@ -71,8 +71,8 @@ describe('bacstack - Services layer WriteProperty unit', () => {
 
   it('should successfully encode and decode with defined priority', () => {
     const buffer = utils.getBuffer();
-    const date = new Date(1, 1, 1);
-    const time = new Date(1, 1, 1);
+    const date = new Date(2021, 11, 25);
+    const time = new Date(1, 0, 1, 12, 34, 56);
     time.setMilliseconds(990);
     baServices.writeProperty.encode(buffer, 31, 12, 80, 0xFFFFFFFF, 8, [
       {type: 0},
@@ -135,8 +135,8 @@ describe('bacstack - Services layer WriteProperty unit', () => {
 
   it('should successfully encode and decode with defined array index', () => {
     const buffer = utils.getBuffer();
-    const date = new Date(1, 1, 1);
-    const time = new Date(1, 1, 1);
+    const date = new Date(2021, 11, 25);
+    const time = new Date(1, 0, 1, 12, 34, 56);
     time.setMilliseconds(990);
     baServices.writeProperty.encode(buffer, 31, 12, 80, 2, 0, [
       {type: 0, value: null},

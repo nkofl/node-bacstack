@@ -376,7 +376,7 @@ describe('ReadPropertyAcknowledge', () => {
 
   it('should successfully encode and decode a date value', () => {
     const buffer = utils.getBuffer();
-    const date = new Date(1, 1, 1);
+    const date = new Date(2021, 11, 25);
     baServices.readProperty.encodeAcknowledge(buffer, {type: 8, instance: 40000}, 81, 0xFFFFFFFF, [
       {type: 10, value: date}
     ]);
@@ -399,7 +399,7 @@ describe('ReadPropertyAcknowledge', () => {
 
   it('should successfully encode and decode a time value', () => {
     const buffer = utils.getBuffer();
-    const time = new Date(1, 1, 1);
+    const time = new Date(1, 0, 1, 12, 34, 56);
     time.setMilliseconds(990);
     baServices.readProperty.encodeAcknowledge(buffer, {type: 8, instance: 40000}, 81, 0xFFFFFFFF, [
       {type: 11, value: time}

@@ -7,8 +7,8 @@ const baServices  = require('../../lib/services');
 describe('bacstack - Services layer CreateObject unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
-    const date = new Date(1, 1, 1);
-    const time = new Date(1, 1, 1);
+    const date = new Date(2021, 11, 25);
+    const time = new Date(1, 0, 1, 12, 34, 56);
     time.setMilliseconds(990);
     baServices.createObject.encode(buffer, {type: 1, instance: 10}, [
       {property: {id: 81, index: 0xFFFFFFFF}, value: [

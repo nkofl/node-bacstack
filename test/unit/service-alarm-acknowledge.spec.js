@@ -8,9 +8,9 @@ const baEnum      = require('../../lib/enum');
 describe('bacstack - Services layer AlarmAcknowledge unit', () => {
   it('should successfully encode and decode with time timestamp', () => {
     const buffer = utils.getBuffer();
-    const eventTime = new Date(1, 1, 1);
+    const eventTime = new Date(1, 0, 1, 12, 34, 56);
     eventTime.setMilliseconds(990);
-    const ackTime = new Date(1, 1, 1);
+    const ackTime = new Date(1, 0, 1, 23, 34, 56);
     ackTime.setMilliseconds(880);
     baServices.alarmAcknowledge.encode(buffer, 57, {type: 0, instance: 33}, 5, 'Alarm Acknowledge Test', {value: eventTime, type: baEnum.TimeStamp.TIME}, {value: ackTime, type: baEnum.TimeStamp.TIME});
     const result = baServices.alarmAcknowledge.decode(buffer.buffer, 0, buffer.offset);
@@ -50,9 +50,9 @@ describe('bacstack - Services layer AlarmAcknowledge unit', () => {
 
   it('should successfully encode and decode with datetime timestamp', () => {
     const buffer = utils.getBuffer();
-    const eventTime = new Date(1, 1, 1);
+    const eventTime = new Date(2021, 0, 1, 12, 34, 56);
     eventTime.setMilliseconds(990);
-    const ackTime = new Date(1, 1, 2);
+    const ackTime = new Date(2021, 0, 2, 12, 34, 56);
     ackTime.setMilliseconds(880);
     baServices.alarmAcknowledge.encode(buffer, 57, {type: 0, instance: 33}, 5, 'Alarm Acknowledge Test', {value: eventTime, type: baEnum.TimeStamp.DATETIME}, {value: ackTime, type: baEnum.TimeStamp.DATETIME});
     const result = baServices.alarmAcknowledge.decode(buffer.buffer, 0, buffer.offset);
