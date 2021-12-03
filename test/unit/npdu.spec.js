@@ -26,7 +26,8 @@ describe('bacstack - NPDU layer', () => {
       source: undefined,
       hopCount: 0,
       networkMsgType: 0,
-      vendorId: 0
+      vendorId: 0,
+      data: {}
     });
   });
 
@@ -42,7 +43,8 @@ describe('bacstack - NPDU layer', () => {
       source: undefined,
       hopCount: 11,
       networkMsgType: 0,
-      vendorId: 0
+      vendorId: 0,
+      data: {}
     });
   });
 
@@ -59,7 +61,8 @@ describe('bacstack - NPDU layer', () => {
       source: {type: 0, net: 1000, adr: [1, 2, 3]},
       hopCount: 13,
       networkMsgType: 0,
-      vendorId: 0
+      vendorId: 0,
+      data: {}
     });
   });
 
@@ -76,7 +79,8 @@ describe('bacstack - NPDU layer', () => {
       source: {type: 0, net: 1000},
       hopCount: 12,
       networkMsgType: 0,
-      vendorId: 0
+      vendorId: 0,
+      data: {}
     });
   });
 
@@ -91,7 +95,8 @@ describe('bacstack - NPDU layer', () => {
       source: undefined,
       hopCount: 0,
       networkMsgType: 128,
-      vendorId: 7777
+      vendorId: 7777,
+      data: {}
     });
   });
 
@@ -106,7 +111,8 @@ describe('bacstack - NPDU layer', () => {
       source: undefined,
       hopCount: 0,
       networkMsgType: 0,
-      vendorId: 0
+      vendorId: 0,
+      data: { network: 0 }
     });
   });
 

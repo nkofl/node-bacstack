@@ -10,6 +10,7 @@ describe('bacstack - BVLC layer', () => {
     baBvlc.encode(buffer.buffer, 10, 1482);
     const result = baBvlc.decode(buffer.buffer, 0);
     expect(result).to.deep.equal({
+      forwardedFor: null,
       len: 4,
       func: 10,
       msgLength: 1482
@@ -21,6 +22,7 @@ describe('bacstack - BVLC layer', () => {
     baBvlc.encode(buffer.buffer, 4, 1482);
     const result = baBvlc.decode(buffer.buffer, 0);
     expect(result).to.deep.equal({
+      forwardedFor: { ip: '0.0.0.0', port: 0 },
       len: 10,
       func: 4,
       msgLength: 1482
